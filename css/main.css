@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+
+body {
+	font-family: "Balsamiq Sans", cursive;
+}
+#payU{
+	font-family: fantasy;
+	font-size: 50px;
+	color:rgb(103, 85, 236);
+}
+.card {
+	border: 1px solid rgb(197, 203, 204);
+	text-align: center;
+	width: 350px;
+	border-radius: 12px;
+	margin-top:32px;
+}
+
+.text-box {
+	padding: 10px 20px;
+	margin: 10px 0;
+	box-sizing: border-box;
+}
+input{
+	border:2px solid black;
+	border-radius: 10px;
+}
+.btn {
+	background-color: rgb(103, 85, 236);
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 16px;
+	border-radius:12px;
+	margin-top: 25px;
+}
+
+.btn:hover {
+	background-color: rgb(13, 50, 216);
+	padding: 12px 22px;
+}
+
+.card-content {
+	padding: 10px 20px;
+}
+
+a {
+	text-decoration: none;
+}

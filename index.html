@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>PayU | UPI LINK Generator</title>
+	<meta name="title" content="PayU | UPI LINK Generator">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+
+
+<body>
+	<center>
+		<div class="card">
+			<div class="card-content">
+				<h1>PayU</h1>
+				<h5 id="name" style="color: #101010;">
+					</h4>
+					<canvas id="qr"></canvas>
+					<div style="margin-top: 2px;">
+						<a id="linkpe">
+							<img src="img/upi.png" height="80">
+							<br>
+							<button class='btn'>Click here to Pay Now</button>
+						</a>
+					</div>
+					<br>
+					<a href="linkpe.html?new" style="color: #777;">Click here to create your own payment link</a>
+					<br>
+					<p style="color: #555">
+						<b>Developed BY :</b>
+						<a  style="color: #999;">Dhruv Mehta</a>
+
+					</p>
+			</div>
+		</div>
+	</center>
+	<script src="qrious/qrious.min.js"></script>
+	<script>
+		if (window.location.search.indexOf('pa') > -1) {
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const pn = urlParams.get('pn');
+			const pa = urlParams.get('pa');
+			console.log("hello");
+			var user;
+			if (pn !== "") user = pn;
+			else user = pa;
+			const url = 'upi://pay' + queryString;
+			document.getElementById("name").innerHTML = "Click on PayNow or Scan Qr and Pay using any UPI Apps To Pay <br>" + user;
+			document.getElementById("linkpe").href = url;
+			(function () {
+				var qr = new QRious({
+					element: document.getElementById('qr'),
+					background: '#fff',
+					foreground: '#000',
+					size: 200,
+					level: 'H',
+					value: url
+				});
+			})();
+		} else {
+			location.replace("linkpe.html?error");
+		}
+	</script>
+</body>
+
+</html>

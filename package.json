@@ -1,0 +1,16 @@
+{
+  "name": "PayU",
+  "version": "1.0.0",
+  "description": "will describe later",
+  "main": "index.html",
+  "type":"module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Dhruv Mehta",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
