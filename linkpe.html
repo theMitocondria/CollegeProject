@@ -24,6 +24,7 @@
 					<br><br>
 					<a onclick='copyUpiUrl()' class='btn' id='btn-copy'>Copy Link</a>
 					<a id='whatsapp' class="btn">Share Link</a>
+					<a id="goto" class="btn" href=linkpeURL>Pay</a>
 				</div>
 				<form id="linkpeform">
 					<label style="color: #DAE1E2;">Enter Name:</label><br>
@@ -65,6 +66,7 @@
 		document.getElementById("whatsapp").href = "https://wa.me/?text=Hi%2C%20You%20can%20pay%20me%20by%20this%20Upi%20Payment%20Link%0A%20" + encodeURIComponent(linkpeURL);
 		document.getElementById("linkpediv").style.display = "block";
 		document.getElementById("linkpeform").style.display = "none";
+		document.getElementById("goto").href=linkpeURL; 
 	}
 	function copyUpiUrl() {
 		var copylinkpe = document.getElementById("linkpeURL");
