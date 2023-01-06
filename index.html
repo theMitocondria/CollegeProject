@@ -73,10 +73,9 @@
 	if (pa !== null) {
 		// check prod or dev
 		var linkpeURL = window.location.hostname;
-		if (linkpeURL.includes("localhost")) {
+
 			console.log("dev");
 			linkpeURL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}/index.html`;
-		}
 
 		linkpeURL += `?pa=${pa}&pn=${pn}&cu=INR`;
 		if (!isNaN(am) && am !== null && am !== "") {
